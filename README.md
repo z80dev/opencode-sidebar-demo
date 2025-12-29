@@ -2,6 +2,8 @@
 
 A demonstration plugin for [OpenCode](https://github.com/sst/opencode) showcasing the experimental Sidebar Panel API.
 
+> **Note:** This plugin requires the Sidebar Panel API which is not yet merged into OpenCode. It currently only works with [this fork](https://github.com/z80dev/opencode/tree/feature/plugin-sidebar-panels) (see [PR #6389](https://github.com/sst/opencode/pull/6389)). As such, this code is primarily provided for **illustration purposes** to demonstrate how the API works and what's possible with sidebar plugins.
+
 ## What is this?
 
 This plugin serves as a reference implementation for the OpenCode sidebar panel system. It demonstrates how plugins can register custom panels that appear in the OpenCode sidebar alongside built-in sections like MCPs, context usage, and todos.
@@ -54,21 +56,21 @@ Each item can include a `status` field that controls its visual appearance:
 
 ## Installation
 
-Add the plugin to your `opencode.json`:
+1. Clone this repository:
 
-```json
-{
-  "plugin": ["github:z80dev/opencode-sidebar-demo"]
-}
+```bash
+git clone https://github.com/z80dev/opencode-sidebar-demo.git
 ```
 
-Or for local development:
+2. Add the plugin to your `opencode.json` using the local file path:
 
 ```json
 {
   "plugin": ["file:///path/to/opencode-sidebar-demo/src/index.ts"]
 }
 ```
+
+Replace `/path/to/` with the actual path where you cloned the repository.
 
 ## Purpose
 
